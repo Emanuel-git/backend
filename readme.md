@@ -39,7 +39,7 @@ Não existe certo ou errado, queremos saber como você se sai em situações rea
 - Crie uma branch com o nome desafio
 
 # Como enviar seu teste
-Envie um email para [carreira@geniontechnology.com.br] com o link do seu repositório.
+Envie um email para [codereview@geniontechnology.com.br] com o link do seu repositório.
 
 Se o seu repositório for privado, conceda acesso de leiturao ao email [codereview@geniontechnology.com.br].
 
