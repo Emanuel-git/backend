@@ -9,7 +9,6 @@ Não existe certo ou errado, queremos saber como você se sai em situações rea
 - O foco principal do nosso teste é o backend. Para facilitar você poderá utilizar os arquivos html  disponíveis no diretório assets
 - Crie essa aplicação como se fosse uma aplicação real, que seria utilizada pelo Genion
 - Fique à vontade para usar bibliotecas/componentes externos
-- Seguir princípios **MVC** 
 - Utilize boas práticas de programação
 - Utilize boas práticas de git
 - Documentar como rodar o projeto
@@ -41,6 +40,8 @@ Não existe certo ou errado, queremos saber como você se sai em situações rea
 # Como enviar seu teste
 Envie um email para [codereview@geniontechnology.com.br] com o link do seu repositório.
 
-Se o seu repositório for privado, conceda acesso de leiturao ao email [codereview@geniontechnology.com.br].
+Se o seu repositório for privado, conceda acesso de leitura ao email [codereview@geniontechnology.com.br].
 
 Qualquer dúvida sobre o teste, fique a vontade para entrar em contato conosco.
+
+Bom trabalho!
