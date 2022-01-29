@@ -108,7 +108,7 @@
 <main class="content">
   <h1 class="title new-item">New Product</h1>
 
-  <form method="POST" action="../api/addproduct.php" enctype="multipart/form-data">
+  <form method="POST" action="../api/addProduct.php" enctype="multipart/form-data">
     <div class="input-field">
       <label for="sku" class="label">Product SKU</label>
       <input type="text" id="sku" class="input-text" name="product_sku" />
