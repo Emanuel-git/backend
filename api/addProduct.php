@@ -40,7 +40,7 @@ if ($_FILES['product_image']['name'] != '') {
     }
 }
 
-$sql = "insert into produtos (nome, sku, preco, descricao, quantidade, codigo_categoria, image_name) values (?, ?, ?, ?, ?, ?, ?)";
+$sql = "insert into produtos (nome, sku, preco, descricao, quantidade, categorias, image_name) values (?, ?, ?, ?, ?, ?, ?)";
 
 try {
     $bd = $conn->prepare($sql);

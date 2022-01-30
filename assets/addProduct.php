@@ -135,7 +135,7 @@
 
         while ($row = $bd->fetch(PDO::FETCH_ASSOC)) {
           echo
-          '<option value="' . $row['codigo'] . '">'
+          '<option value="' . $row['nome'] . '">'
             . $row['nome'] . '</option>';
         }
 
