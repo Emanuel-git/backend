@@ -18,6 +18,6 @@ create table produtos (
     preco float not null,
     descricao text,
     quantidade int not null,
-    codigo_categoria varchar(50) not null,
+    categorias varchar(100) not null,
     image_name varchar(50)
 );
