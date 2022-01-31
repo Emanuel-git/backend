@@ -90,7 +90,7 @@
   <div>
     <ul>
       <li><a href="categories.php" class="link-menu">Categorias</a></li>
-      <li><a href="products.html" class="link-menu">Produtos</a></li>
+      <li><a href="products.php" class="link-menu">Produtos</a></li>
     </ul>
   </div>
 </amp-sidebar>
@@ -156,7 +156,7 @@
       <textarea id="description" class="input-text" name="product_description"></textarea>
     </div>
     <div class="actions-form">
-      <a href="products.html" class="action back">Back</a>
+      <a href="products.php" class="action back">Back</a>
       <input class="btn-submit btn-action" type="submit" value="Save Product" />
     </div>
 

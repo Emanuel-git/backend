@@ -2,7 +2,7 @@
 <html ⚡>
 
 <head>
-  <title>Webjump | Backend Test | Categories</title>
+  <title>Webjump | Backend Test | Products</title>
   <meta charset="utf-8">
 
   <link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
@@ -109,8 +109,9 @@
   <!-- Main Content -->
   <main class="content">
     <div class="header-list-page">
-      <h1 class="title">Categories</h1>
-      <a href="addCategory.html" class="btn-action">Add new Category</a>
+      <h1 class="title">Products</h1>
+      <a href="addProduct.php" class="btn-action">Add new Product</a>
+      <a href="importProducts.html" class="btn-action">Import products</a>
     </div>
     <table class="data-grid">
       <tr class="data-row">
@@ -118,8 +119,18 @@
           <span class="data-grid-cell-content">Name</span>
         </th>
         <th class="data-grid-th">
-          <span class="data-grid-cell-content">Code</span>
+          <span class="data-grid-cell-content">SKU</span>
         </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Price</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Quantity</span>
+        </th>
+        <th class="data-grid-th">
+          <span class="data-grid-cell-content">Categories</span>
+        </th>
+
         <th class="data-grid-th">
           <span class="data-grid-cell-content">Actions</span>
         </th>
@@ -127,28 +138,54 @@
 
       <?php
 
-      include_once '../api/getCategories.php';
+      require_once '../api/getProducts.php';
 
-      while ($row = $bd->fetch(PDO::FETCH_ASSOC)) {
+      $products = getProducts();
+
+      foreach ($products as $prod) {
+        $categorias = explode('|', $prod['categorias']);
+        $categorias = implode('<br>', $categorias);
+
         echo
         '<tr class="data-row"><td class="data-grid-td"><span class="data-grid-cell-content">'
-          . $row['nome'] . '</span></td>'
+          . $prod['nome'] . '</span></td>'
           . '<td class="data-grid-td"><span class="data-grid-cell-content">'
-          . $row['codigo'] . '</span></td>'
-          . '<td class="data-grid-td"><div class="actions"><div class="action edit"><span>Edit</span></div><div class="action delete"><span>Delete</span></div></div></td>';
+          . $prod['sku'] . '</span></td>'
+          . '<td class="data-grid-td"><span class="data-grid-cell-content">'
+          . 'R$' . str_replace('.', ',', $prod['preco']) . '</span></td>'
+          . '<td class="data-grid-td"><span class="data-grid-cell-content">'
+          . $prod['quantidade'] . '</span></td>'
+          . '<td class="data-grid-td"><span class="data-grid-cell-content">'
+          . $categorias . '</span></td>'
+          . '<td class="data-grid-td">'
+          . '<div class="actions"><div class="action edit"><span>Edit</span></div><div class="action delete"><span>Delete</span>'
+          . '</div></div></td></tr>';
       }
 
       ?>
 
+
       <!-- <tr class="data-row">
         <td class="data-grid-td">
-           <span class="data-grid-cell-content">Category 1 Name</span>
+          <span class="data-grid-cell-content">Product 1 Name</span>
         </td>
-      
+
         <td class="data-grid-td">
-           <span class="data-grid-cell-content">Category 1 Code</span>
+          <span class="data-grid-cell-content">SKU1</span>
         </td>
-      
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">R$ 19,90</span>
+        </td>
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">100</span>
+        </td>
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">Category 1 <Br />Category 2</span>
+        </td>
+
         <td class="data-grid-td">
           <div class="actions">
             <div class="action edit"><span>Edit</span></div>
@@ -158,13 +195,25 @@
       </tr>
       <tr class="data-row">
         <td class="data-grid-td">
-           <span class="data-grid-cell-content">Category 2 Name</span>
+          <span class="data-grid-cell-content">Product 2 Name</span>
         </td>
-      
+
         <td class="data-grid-td">
-           <span class="data-grid-cell-content">Category 2 Code</span>
+          <span class="data-grid-cell-content">SKU2</span>
         </td>
-      
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">R$ 59,90</span>
+        </td>
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">999</span>
+        </td>
+
+        <td class="data-grid-td">
+          <span class="data-grid-cell-content">Category 1</span>
+        </td>
+
         <td class="data-grid-td">
           <div class="actions">
             <div class="action edit"><span>Edit</span></div>

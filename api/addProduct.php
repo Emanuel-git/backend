@@ -58,4 +58,4 @@ try {
     die($e->getMessage());
 }
 
-echo '<script type="text/javascript">location.href="../assets/products.html"</script>';
+echo '<script type="text/javascript">location.href="../assets/products.php"</script>';
