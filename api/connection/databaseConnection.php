@@ -1,6 +1,6 @@
 <?php
 
-require_once 'pdoconfig.php';
+require 'pdoconfig.php';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
